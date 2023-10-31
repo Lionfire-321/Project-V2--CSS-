@@ -133,7 +133,7 @@ footer {
     font-weight: bold;
     color: white;
     font-size: 1.2vw;
-    padding: 3vw 6vw;
+    padding: 1.5vw 7vw;
     background-color: rgb(70, 70, 70);
 }
 
@@ -145,7 +145,7 @@ footer .footer-content {
 }
 
 footer img {
-    width: 15vw;
+    width: 10vw;
     height: auto; 
     padding-right: 5vw;
 }
