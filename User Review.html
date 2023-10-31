@@ -16,19 +16,22 @@
     </header>
 
     <body>
-        <div>
-            <h3>
-                Name: Jacques Xuereb
-                <br>
-                Current time: <time id="current-time-cet">10:36</time>
+        <br><br><br><br>
+        <div class="suggestion-box">
+            <div class="suggestion-title">Submit Your Suggestion</div>
+            <form class="suggestion-form">
+                <label for="name" class="suggestion-label">Your Name:</label>
+                <input type="text" id="name" name="name" class="suggestion-input" placeholder="Your Name">
                 <br><br>
-                <form>
-                    <label for="message">Type your message:</label>
-                    <textarea id="message" name="message" rows="5" cols="30"></textarea>
-                    <br>
-                    <input type="submit" value="Submit">
-                </form>
-            </h3>
+                <label for="timestamp" class="suggestion-label">Date/Time:</label>
+                <input type="datetime-local" id="timestamp" name="datetime" class="suggestion-input" placeholder="Enter timestamp">
+                <br><br>
+                <label for="suggestion" class="suggestion-label">Suggestion:</label>
+                <textarea id="suggestion" name="suggestion" class="suggestion-input" rows="4" placeholder="Enter your suggestion here"></textarea>
+                <br><br>
+                <input type="button" value="Submit" class="suggestion-submit" onclick="submitSuggestion()">
+                <div class="suggestion-info" id="suggestion-info"></div>
+            </form>
         </div>
     </body>
 </html>

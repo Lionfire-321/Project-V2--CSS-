@@ -80,6 +80,50 @@ body {
     background-color: rgb(255, 242, 227);
 }
 
+.suggestion-box {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.suggestion-title {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.suggestion-form {
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.suggestion-label {
+    font-size: 16px;
+}
+
+.suggestion-input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.suggestion-submit {
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+.suggestion-info {
+    font-size: 14px;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
 footer {
     display: flex;
     justify-content: space-between;
