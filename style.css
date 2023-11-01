@@ -77,6 +77,8 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-color: rgb(255, 242, 227);
 }
 
@@ -131,6 +133,7 @@ footer {
     text-align: justify;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+    margin-top: auto;
     color: white;
     font-size: 1.2vw;
     padding: 1.5vw 7vw;
