@@ -160,12 +160,12 @@ footer img {
         font-weight: bold;
         color: rgb(0, 0, 0);
         padding: 4vw;
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
     .active {
         font-weight: bold;
-        font-size: 3vw;
+        font-size: 4vw;
         color: #ffffff;
     }
 
@@ -174,7 +174,7 @@ footer img {
         text-align: justify;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
-        font-size: 3vw;
+        font-size: 4vw;
         padding-left: 7vw;
         padding-right: 7vw;
     }
@@ -184,7 +184,7 @@ footer img {
         text-align: justify;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
-        font-size: 2vw;
+        font-size: 3vw;
         padding-left: 4vw;
     }   
 
@@ -193,7 +193,7 @@ footer img {
         text-align: justify;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
-        font-size: 2vw;
+        font-size: 3vw;
         padding-top: 0vw;
         padding-left: 7vw;
         padding-right: 5vw;
