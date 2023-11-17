@@ -1,9 +1,13 @@
 header {
-    text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     background-color: rgb(121, 164, 215);
     padding: 1vw;
+}
+
+#headerFormat{
+    padding-left: 9vw; 
+    display: inline;
 }
 
 a {
@@ -11,8 +15,17 @@ a {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     color: rgb(0, 0, 0);
-    padding: 3vw;
-    font-size: 1.3vw;
+    padding-left: 3vw;
+    font-size: 1.5vw;
+}
+
+h3{
+    display: inline;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 3vw;
+    color: rgb(50, 70, 150);
+    padding-left: 0vw;
 }
 
 h4 {
@@ -151,21 +164,37 @@ footer img {
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
         background-color: rgb(121, 164, 215);
-        padding: 1vw;
     }
 
+    #headerFormat{
+        padding: 0vw;
+        text-align: center;
+    }
+    
     a {
         text-decoration: none;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
+        text-align: center;
         color: rgb(0, 0, 0);
-        padding: 4vw;
-        font-size: 4vw;
+        font-size: 2vw;
+    }
+    
+    h3{
+        text-align: center;
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        margin-bottom: 0vw;
+        margin-top: 3vw;
+        font-size: 5vw;
+        padding-bottom: 0vw;
+        color: rgb(50, 70, 150);
     }
 
     .active {
         font-weight: bold;
-        font-size: 5vw;
+        font-size: 3svw;
         color: #ffffff;
     }
 
