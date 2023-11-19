@@ -35,8 +35,51 @@
         </p>
         <img src="flagofzurrieq.png" alt="The Flag of Żurrieq"> 
     </div>
-    
-    <br><br><br><br>
+
+    <!-- Weather Widget -->
+    <br><br>
+    <div class="widget">
+        <h3>Current Weather in Żurrieq</h3>
+        <div id="weatherInfo"></div>
+      </div>
+
+    <script>
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?id=2562250&appid=f86a53cd8089737ed2d3e4dbe3c9465a&units=metric`;
+        
+        fetch(apiUrl).then(response => response.json()).then(data => {const weatherInfo = document.getElementById('weatherInfo');
+        const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+        
+        weatherInfo.innerHTML = `
+            <img src="${iconUrl}" alt="${data.weather[0].description}" class="weather-icon"> 
+            <p1>${data.main.temp}°C</p1> <br>
+            <p2>Description: ${data.weather[0].description}</p2> <br>
+            <p2>Humidity: ${data.main.humidity}%</p2> <br>
+            <p2>Wind Speed: ${data.wind.speed} m/s</p2>`;
+      })
+      
+      .catch(error => {
+            console.error('There was a problem fetching the weather data:', error);
+            const weatherInfo = document.getElementById('weatherInfo');
+            weatherInfo.innerHTML = `<p>Failed to fetch weather data. Please try again.</p>`;
+      });
+    </script>
+
+    <br><br>
+    <!-- Map Widget -->
+    <div id="map"></div>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script>
+        var map = L.map('map').setView([35.8291,14.4786], 15);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+    </script>
+
+    <br><br>
     <footer>
         <div class="footer-content">
             <img src="flagofzurrieq.png" alt="The Flag of Żurrieq"> 
