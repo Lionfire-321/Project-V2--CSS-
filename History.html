@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Iż-Żurrieq</title>
         <link rel="stylesheet" href="style.css">
+        <script src = "expand_image.js"></script>
     </head>
 
     <body>
@@ -21,7 +22,7 @@
         
         <br><br>
         <h4>The History of Żurrieq</h4>
-        <div class="image-container">
+        <div class="image-textBox">
             <h5> 
                 Żurrieq was inhabited since the bronze age by a relatively large population. The largest village in the area, 
                 it is also the centre of most of its commercial activities and offers a number of interesting sites. The first 
@@ -31,7 +32,14 @@
                 integral part of the village perimeter. Lying further away from the main village centre there are two other 
                 hamlets, Bubaqra and in-Nigret.
             </h5>
-            <img id = "image" src="oldmap.jpg" alt="Old Map of Malta">
+
+            <div id = "imageContainer">
+                <img id = "image" src="oldmap.jpg" alt="Old Map of Malta" class = "clickable-image"> 
+            </div>
+            <div id = "overlay" class =  "hidden"> 
+                <img id = "expandedImage" src="">
+                <span id = "closeButton">&times;</span>
+            </div>
         </div>
 
         <h4>Origins of the name 'Żurrieq'</h4>
@@ -47,8 +55,15 @@
         </p>  
         
         <h4>Parish Church & Surroundings</h4>
-        <div class="image-container">
-            <img id = "image" src="zurrieqchurch.jpg" alt="Old Map of Malta">
+        <div class="image-textBox">
+            <div id = "imageContainer">
+                <img id = "image" src="zurrieqchurch.jpg" alt="Old Map of Malta" class = "clickable-image"> 
+            </div>
+            <div id = "overlay" class =  "hidden"> 
+                <img id = "expandedImage" src="">
+                <span id = "closeButton">&times;</span>
+            </div>
+
             <h5> 
                 The Parish Church dedicated to St. Catherine of Alexandria knows its roots to a chapel built on the same site 
                 in 1436 by Mons. De Mello. The church we know today is that built on both the site of the chapel dedicated to 
@@ -77,7 +92,7 @@
         </p>
         
         <h4>Tax-Xarolla Windmill</h4>
-        <div class="image-container">
+        <div class="image-textBox">
             <h5> 
                 The Xarolla Windmill at Żurrieq, Malta is one of the windmills constructed by the Order of St. John in the 
                 villages and towns of Malta. It was built in the 18th-century and is presently one of the most preserved 
@@ -92,7 +107,14 @@
                 Local Council and is intended to serve also as a cultural centre. The sails were extensively damaged in a gale on 
                 18 March 2022.
             </h5>
-            <img id = "image" src="xarolla.jpeg" alt="xarolla">
+
+            <div id = "imageContainer">
+                <img id = "image" src="xarolla.jpg" alt="Old Map of Malta" class = "clickable-image"> 
+            </div>
+            <div id = "overlay" class =  "hidden"> 
+                <img id = "expandedImage" src="">
+                <span id = "closeButton">&times;</span>
+            </div>
         </div>
         
         <h4>Palaces</h4>
