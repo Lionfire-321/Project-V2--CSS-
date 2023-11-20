@@ -8,10 +8,9 @@
 </head>
 
 <body>
-    <!-- Header Menu -->
-    <header>
-        <h3>Iż-Żurrieq</h3>
-        <div id = "headerFormat">
+    <header> <!-- Header Menu -->
+        <h3 id = "headerText">Iż-Żurrieq</h3>
+        <div id = "headerMenu">
             <a href="index.html" class="active">Home</a> 
             <a href="User Review.html">User Review</a> 
             <a href="Famous Inhabitants.html">Famous Inhabitants</a>
@@ -19,14 +18,12 @@
         </div>
     </header>
 
-    <!-- Banner Image -->
-    <div>
+    <div><!-- Banner Image -->
         <img src="home_banner.png" alt="Banner"> 
     </div>
     
-    <!-- Home Page Text -->
     <br><br>
-    <div class="image-container"> 
+    <div class="image-container"> <!-- Home Page Text -->
         <p>
             Żurrieq is a town in the Southern Region of Malta. It is one of the oldest towns in the country,
             and it has a population of 12,295 inhabitants as of 2021.
@@ -39,9 +36,8 @@
         <img src="flagofzurrieq.png" alt="The Flag of Żurrieq"> 
     </div>
 
-    <!-- Weather Widget -->
     <br><br>
-    <div class="widget">
+    <div class="widget"> <!-- Weather Widget -->
         <h3>Current Weather in Żurrieq</h3>
         <div id="weatherInfo"></div>
       </div>
@@ -68,9 +64,8 @@
       });
     </script>
 
-    <!-- Map Widget -->
     <br><br>
-    <div id="map"></div>
+    <div id="map"></div> <!-- Map Widget -->
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
@@ -78,17 +73,32 @@
     <script>
         var map = L.map('map').setView([35.8291,14.4786], 15);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
+            maxZoom: 20,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
+
+        var address = "Malta"
+        addresses.forEach(function(address) {
+            var username = 'JacquesX';
+            var url = `https://api.geonames.org/searchJSON?q=${encodeURIComponent(address)}&maxRows=1&username=${username}`;
+            var proxyUrl = `https://cors-anywhere.herokuapp.com/${url}`;
+            
+            fetch(proxyUrl).then(response => response.json()).then(data => {
+                var geoname = data.geonames[0];
+                if (geoname) {
+                    var lat = geoname.lat;
+                    var lng = geoname.lng;
+                    L.marker([lat, lng]).addTo(map).bindPopup(address).openPopup();
+                }
+            })
+            .catch(error => {
+                console.log('Error:', error);
+            });
+        });
     </script>
-
-    <!-- Map Markers -->
     
-
-    <!-- Foooter -->
     <br><br>
-    <footer>
+    <footer> <!-- Foooter -->
         <div class="footer-content">
             <img src="flagofzurrieq.png" alt="The Flag of Żurrieq"> 
             <p>&copy; 2023 zurrieq.com.</p>
