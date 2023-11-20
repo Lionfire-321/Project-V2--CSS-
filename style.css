@@ -69,8 +69,7 @@ p1 {
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    font-size: 3vw;
-    padding-left: 6vw;
+    font-size: 4vw;
 }
 
 p2 {
@@ -79,7 +78,7 @@ p2 {
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    font-size: 1.7vw;
+    font-size: 2vw;
     padding-left: 0vw;
 }
 
@@ -313,6 +312,13 @@ footer img {
         margin-right: 5vw;
         width: 30vw;
         height: 30vw;
+    }
+
+    #map { 
+        margin: auto;
+        height: 80vw; 
+        width: 80vw;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     img {

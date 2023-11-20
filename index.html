@@ -47,7 +47,7 @@
         const apiUrl = `https://api.openweathermap.org/data/2.5/weather?id=2562250&appid=f86a53cd8089737ed2d3e4dbe3c9465a&units=metric`;
         
         fetch(apiUrl).then(response => response.json()).then(data => {const weatherInfo = document.getElementById('weatherInfo');
-        const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+        const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
         
         weatherInfo.innerHTML = `
             <img src="${iconUrl}" alt="${data.weather[0].description}" class="weather-icon"> 
