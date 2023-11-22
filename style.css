@@ -188,7 +188,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: rgb(255, 242, 227);
+    background-color: rgb(250, 240, 230 );
 }
 
 /* Suggestion Box CSS */
