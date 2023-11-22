@@ -170,6 +170,7 @@ img {
     display: flex;
     align-items: center;
     text-align: justify;
+    flex-direction: row;
     font-size: 1.2vw;
     padding-left: 3vw;
     padding-right: 6vw;
@@ -435,14 +436,12 @@ footer img {
         position: relative;
         align-items: center;
         text-align: justify;
-        padding-left: 3vw;
-        padding-right: 5vw;
+        flex-direction: column;
     }
 
     .image-textBox img {
-        width: 30vw;
+        width: 80vw;
         height: auto;
-        margin-left: 5vw;
     }
 
     body {
