@@ -230,6 +230,24 @@ body {
     cursor: pointer;
 }
 
+/*Previous User Reviews CSS*/
+.suggestion-item {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 2vw;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.suggestion-item p {
+    padding-left: 2vw;
+}
+
+#suggestions-list {
+    max-width: 500px;
+    padding-left: 7vw;
+}
+
 /* Footer CSS */
 footer {
     display: flex;

@@ -1,48 +1,61 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Iż-Żurrieq</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-
-    <body>
-        <header>
-            <h3 id = "headerText">Iż-Żurrieq</h3>
-            <div id = "headerMenu">
-                <a href="index.html">Home</a> 
-                <a href="User Review.html" class="active">User Review</a> 
-                <a href="Famous Inhabitants.html">Famous Inhabitants</a>
-                <a href="History.html">History</a> 
-            </div>
-        </header>
-
-        <br><br><br><br>
-        <div class="suggestion-box">
-            <div class="suggestion-title">Submit Your Suggestion</div>
-            <form class="suggestion-form">
-                <label for="name" class="suggestion-label">Your Name:</label>
-                <input type="text" id="name" name="name" class="suggestion-input" placeholder="Your Name">
-                <br><br>
-                <label for="timestamp" class="suggestion-label">Date/Time:</label>
-                <input type="datetime-local" id="timestamp" name="datetime" class="suggestion-input" placeholder="Enter timestamp">
-                <br><br>
-                <label for="suggestion" class="suggestion-label">Suggestion:</label>
-                <textarea id="suggestion" name="suggestion" class="suggestion-input" rows="4" placeholder="Enter your suggestion here"></textarea>
-                <br><br>
-                <input type="button" value="Submit" class="suggestion-submit" onclick="submitSuggestion()">
-                <div class="suggestion-info" id="suggestion-info"></div>
-            </form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iż-Żurrieq</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="reviews.js"></script>
+</head>
+<body>
+    <header>
+        <h3 id="headerText">Iż-Żurrieq</h3>
+        <div id="headerMenu">
+            <a href="index.html">Home</a>
+            <a href="User Review.html" class="active">User Review</a>
+            <a href="Famous Inhabitants.html">Famous Inhabitants</a>
+            <a href="History.html">History</a>
         </div>
+    </header>
 
-        <br><br><br>
-        <footer>
-            <div class="footer-content">
-                <img src="flagofzurrieq.png" alt="The Flag of Żurrieq">
-                <p>&copy; 2023 zurrieq.com.</p>
-            </div>
-        </footer>
-    </body>
+    <br><br><br><br>
+    <div class="suggestion-box" id="suggestion-box">
+        <div class="suggestion-title">Submit Your Suggestion</div>
+        <form class="suggestion-form">
+            <label for="name" class="suggestion-label">Your Name:</label>
+            <input type="text" id="name" name="name" class="suggestion-input" placeholder="Your Name">
+            <br><br>
+            <label for="timestamp" class="suggestion-label">Date/Time:</label>
+            <input type="datetime-local" id="timestamp" name="timestamp" class="suggestion-input" placeholder="Enter timestamp">
+            <br><br>
+            <label for="suggestion" class="suggestion-label">Suggestion:</label>
+            <textarea id="suggestion" name="suggestion" class="suggestion-input" rows="4" placeholder="Enter your suggestion here"></textarea>
+            <br><br>
+            <input type="submit" value="Submit" class="suggestion-submit">
+            <div class="suggestion-info" id="suggestion-info"></div>
+        </form>
+    </div>
+    
+    <script>
+            const timestampInput = document.getElementById('timestamp');
+        const currentDateTime = new Date();
+        const formattedDateTime = `${currentDateTime.getFullYear()}-${String(currentDateTime.getMonth() + 1).padStart(2, '0')}-${String(currentDateTime.getDate()).padStart(2, '0')}T${String(currentDateTime.getHours()).padStart(2, '0')}:${String(currentDateTime.getMinutes()).padStart(2, '0')}`;
+        timestampInput.value = formattedDateTime;
+    </script>
+    
+    <br><br><br>
+    <h4>Previous Suggestions</h4>
+    <div id="suggestions-list">
+        <!-- Suggestions will be displayed here -->
+    </div>
+
+    <br><br><br>
+    <footer>
+        <div class="footer-content">
+            <img src="flagofzurrieq.png" alt="The Flag of Żurrieq">
+            <p>&copy; 2023 zurrieq.com.</p>
+        </div>
+    </footer>
+</body>
 </html>
